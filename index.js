@@ -159,16 +159,16 @@ const fileName = ("./dist/Readme.md")
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, readmePage) {
+function writeToFile(fileName, genReadme) {
     return new Promise ((resolve, reject) => {
-        fs.writeFile(filename, readmePage, err => {
+        fs.writeFile(fileName, genReadme, err => {
             if (err)
             { reject(err);
               return;  
             }
             resolve({
                 ok : true, 
-                mesdsage : 'File Created'
+                message : 'Readme File Created'
             })
         });
     });
@@ -185,8 +185,8 @@ init()
 .then (data => {
     return generateMarkdown(data);
 })
-.then (readmePage => {
-    return writeToFile(fileName, readmePage);    
+.then (genReadme => {
+    return writeToFile(fileName, genReadme);    
 })
 .then (writefileResponse => {
     console.log(writefileResponse);

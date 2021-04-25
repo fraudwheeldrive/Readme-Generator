@@ -1,28 +1,21 @@
 const fs = require('fs');
 const inquirer = require ('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
-const fileName = ("./dist/Readme.md")
 
 
 //questions to generate readme 
 //return inquirer .prompt ([
     const questions =[
-    // intro: 
-    /*console.log(`
-    ===============================
 
-    Welcome to the Readme Generator
-
-    ===============================
-
-    Please fill out the following 
-    questions to Generate your 
-    professional Readme! 
-
-    ===============================
-  `),
-// 1.what is you github username?
+/* 0. Greeting 
+{ 
+    type: 'input',
+    name: 'welcome',
+    message: 'Welcome to the Readme Generator, please press enter to continue',    
+},
 */
+// 1.what is you github username?
+
      {
         type: 'input',
         name: 'githubname',
@@ -155,24 +148,39 @@ const fileName = ("./dist/Readme.md")
             return false;
         }
     }  
-} , 
+} ,
+//10. What Technologies were used to build this project 
+{
+    type: 'input',
+    name: 'tech',
+    message:'What Technologies and reference materials were used to build this project?',
+    validate: techInput => {
+        if (techInput) {
+            return true;
+        } else {
+            console.log("please let the user know how to use the Repo");
+            return false;
+        }
+    }  
+  },
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, genReadme) {
-    return new Promise ((resolve, reject) => {
-        fs.writeFile(fileName, genReadme, err => {
-            if (err)
-            { reject(err);
-              return;  
-            }
-            resolve({
-                ok : true, 
-                message : 'Readme File Created'
-            })
+const writeFile = fileName => {
+    return new Promise((resolve, reject) => {
+      fs.writeFile('./dist/Readme.md', fileName, err => {
+        if (err) {
+          reject(err);
+          return;
+        }
+  
+        resolve({
+          ok: true,
+          message: 'File created!'
         });
+      });
     });
-};
+  };
 
 
 // TODO: Create a function to initialize app
@@ -181,20 +189,8 @@ function init() {
 }
 
 // Function call to initialize app
-init()
-.then (data => {
-    return generateMarkdown(data);
-})
-.then (genReadme => {
-    return writeToFile(fileName, genReadme);    
-})
-.then (writefileResponse => {
-    console.log(writefileResponse);
-})
-.catch (err => {
-    console.log(err)
-});
+init();
 
-
+module.exports = {writeFile};
 
 

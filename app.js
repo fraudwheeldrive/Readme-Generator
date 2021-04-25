@@ -1,10 +1,15 @@
-// user input test 
+const fs = require('fs');
+const inquirer = require ('inquirer');
+console.log(inquirer);
 
-const readmeDataArgs = process.argv.slice(2, process.argv.length);
-console.log(readmeDataArgs);
+//questions to generate readme 
 
-const printReadmeData = readmeDataArr => {
-    for (let i = 0; i < readmeDataArr.length; i++) {
-        console.log(readmeDataArr[i]);
+inquirer
+.prompt([
+    {
+        type: 'input',
+        name: 'name',
+         message: "what is your name?"
     }
-};
+])
+.then(answers => console.log(answers));

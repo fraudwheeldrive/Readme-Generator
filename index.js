@@ -1,6 +1,7 @@
 const fs = require('fs');
 const inquirer = require ('inquirer');
 const generateMarkdown = require("./utils/generateMarkdown");
+const fileName = ('./dist/Readme.md');
 
 
 //questions to generate readme 
@@ -166,9 +167,10 @@ const generateMarkdown = require("./utils/generateMarkdown");
 ];
 
 // TODO: Create a function to write README file
-const writeFile = fileName => {
+  
+ function writeToFile(fileName, createReadme) {
     return new Promise((resolve, reject) => {
-      fs.writeFile('./dist/Readme.md', fileName, err => {
+      fs.writeFile (fileName, createReadme, err => {
         if (err) {
           reject(err);
           return;
@@ -176,7 +178,7 @@ const writeFile = fileName => {
   
         resolve({
           ok: true,
-          message: 'File created!'
+          message: 'Readme File created!'
         });
       });
     });
@@ -189,8 +191,19 @@ function init() {
 }
 
 // Function call to initialize app
-init();
+init()
+.then(data => {
+    return generateMarkdown(data);
+})
+.then(createReadme => {
+    return writeToFile(fileName, createReadme);
+})
+.then (writeFile => {
+    console.log(writeFile);
+})
+.catch (err => {
+    console.log(err)
+});
 
-module.exports = {writeFile};
 
 

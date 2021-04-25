@@ -1,7 +1,7 @@
 const fs = require('fs');
 const inquirer = require ('inquirer');
-const generateMarkdown = require("./utils/generateMarkDown.js");
-const fileName = './dist/README.md';
+const generateMarkdown = require("./utils/generateMarkdown");
+const fileName = ("./dist/Readme.md")
 
 
 //questions to generate readme 
@@ -87,7 +87,7 @@ const fileName = './dist/README.md';
 // Other
         {
             type: 'checkbox',
-            name: 'Licsense',
+            name: 'License',
             message:'Please select the license your project uses, if no option is selected license will default to MIT',
             choices: [
                'MIT',
@@ -145,7 +145,7 @@ const fileName = './dist/README.md';
 // 9.what does  the user need to know about Contributing to the repo?
 {
     type: 'input',
-    name: 'contribtute',
+    name: 'contribute',
     message:'what does the user need to know about contributing the Repo?',
     validate: contributeInput => {
         if (contributeInput) {
@@ -186,7 +186,7 @@ init()
     return generateMarkdown(data);
 })
 .then (readmePage => {
-    return writeToFile(filename, readmePage);    
+    return writeToFile(fileName, readmePage);    
 })
 .then (writefileResponse => {
     console.log(writefileResponse);

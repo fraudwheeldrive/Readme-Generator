@@ -1,15 +1,26 @@
 const fs = require('fs');
 const inquirer = require ('inquirer');
-console.log(inquirer);
+
+
 
 //questions to generate readme 
 
+//inquirer
+
 inquirer
-.prompt([
+.prompt ([
     {
         type: 'input',
-        name: 'name',
-         message: "what is your name?"
+        name: 'githubname',
+        message:'what is you github username?',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log("please enter your Github Username");
+                return false;
+            }
+        }
     }
 ])
-.then(answers => console.log(answers));
+

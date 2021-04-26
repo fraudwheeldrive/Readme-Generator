@@ -22,7 +22,7 @@ nmp install inquirer
 
 ## demonstration
 screenshot of CLI 
-![alt text](https://github.com/fraudwheeldrive/Coding-Assignment-1/blob/main/assets/images/Horiseon%20Wireframe.png)
+![alt text](https://github.com/fraudwheeldrive/Readme-Generator/blob/main/assets/images/screenshot.PNG)
 
 Please refer to video below 
 

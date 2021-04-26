@@ -42,7 +42,7 @@ ${data.tests}
 ## Email Address
 ${data.email}
 
-## Technologies Used
+## Credits
 ${data.tech}
 
 ## License

@@ -1,4 +1,4 @@
-# Readme Generator 
+# g
   
   ## Table of Contents
 
@@ -7,30 +7,30 @@
 * [Credits](#credits)
 * [License](#license)
 
-## Github User Name
-  Fraudwheeldrive 
-
-## Email Address
-  adcore89@gmail.com
-
-## Project Name 
-  Readme Generator 
-
 ## Description 
-  Redme Generator is a command line based tool that leverages the power of node.js and the inquirer and file systems functions. It is an interactive application that prompts the users with quequestions and takes in dynamic input and formats it into a Readme in Markdown format that can be used for the users github readme 
-
-## License
-  undefined
+g
 
 ## Installation
-  First off please ensure that Node.JS is installed on your work station. Follwoing this from the commandline you will need 
+g
+
+## Usage 
+g
+
+## Github User Name
+g
 
 ## Tests
-  node index 
+g
  
-## Usage 
-  Repo can be cloned using the follow ssh link git@github.com:fraudwheeldrive/Readme-Generator.git
-
 ## Contributing
-  contributions to main will require the opening of a pull request 
+ gg
+
+## Email Address
+g
+
+## Credits
+g
+
+## License
+MIT
 

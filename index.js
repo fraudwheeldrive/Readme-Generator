@@ -80,8 +80,8 @@ const fileName = ('./dist/Readme.md');
 // The unlicense 
 // Other
         {
-            type: 'checkbox',
-            name: 'License',
+            type: 'list',
+            name: 'license',
             message:'Please select the license your project uses, if no option is selected license will default to MIT',
             choices: [
                'MIT',

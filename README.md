@@ -21,6 +21,9 @@ npm init -y
 nmp install inquirer 
 
 ## demonstration
+screenshot of CLI 
+![](image.png)
+
 Please refer to video below 
 
 https://drive.google.com/file/d/1l7wLR-VZkASij8cq00NCpbR4q4MmDWfv/view?usp=sharing

@@ -22,7 +22,7 @@ nmp install inquirer
 
 ## demonstration
 Please refer to video below 
-<iframe src="https://drive.google.com/file/d/1l7wLR-VZkASij8cq00NCpbR4q4MmDWfv/preview" width="640" height="480"></iframe>
+![]https://drive.google.com/file/d/1l7wLR-VZkASij8cq00NCpbR4q4MmDWfv/view?usp=sharing
 
 ## Usage 
 clone repo via SSH or HTTP and create new fork for any changes necessary

@@ -21,7 +21,9 @@ npm init -y
 nmp install inquirer 
 
 ## demonstration
-screenshot of CLI 
+
+This is how the command line application looks
+
 ![alt text](https://github.com/fraudwheeldrive/Readme-Generator/blob/main/assets/images/screenshot.PNG)
 
 Please refer to video below 

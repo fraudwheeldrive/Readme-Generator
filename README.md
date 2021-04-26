@@ -26,7 +26,7 @@ This is how the command line application looks
 
 ![alt text](https://github.com/fraudwheeldrive/Readme-Generator/blob/main/assets/images/screenshot.PNG)
 
-Please refer to video below 
+Please refer to video below to see it in action
 
 https://drive.google.com/file/d/1l7wLR-VZkASij8cq00NCpbR4q4MmDWfv/view?usp=sharing
 

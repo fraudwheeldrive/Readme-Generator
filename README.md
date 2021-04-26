@@ -22,7 +22,7 @@ nmp install inquirer
 
 ## demonstration
 screenshot of CLI 
-![](image.png)
+![](Readme-Generator/assets/images/screenshot.PNG)
 
 Please refer to video below 
 
